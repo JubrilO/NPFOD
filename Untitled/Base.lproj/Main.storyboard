@@ -1,37 +1,372 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HbT-w9-43d">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Gallery View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GalleryViewController" id="BV1-FR-VrT" customClass="GalleryViewController" customModule="Untitled" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="U0K-SW-4ec">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BrB-h1-WRS">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="wSw-Jh-aen" appends="YES" id="Lol-I7-bqL"/>
+                                </connections>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGe-Mw-ZOQ" customClass="SpringButton" customModule="Spring">
+                                <rect key="frame" x="23" y="43" width="50" height="50"/>
+                                <state key="normal" image="Close Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onCloseButtonTap:" destination="BV1-FR-VrT" eventType="touchUpInside" id="R9G-QN-ieH"/>
+                                </connections>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diB-mp-lgX">
+                                <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qbc-JZ-W4c">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point your camera at the Artwork" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcC-NP-jTl">
+                                            <rect key="frame" x="10" y="30" width="355" height="20"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="VcC-NP-jTl" firstAttribute="centerY" secondItem="Qbc-JZ-W4c" secondAttribute="centerY" id="Qsu-XX-cGe"/>
+                                        <constraint firstAttribute="trailing" secondItem="VcC-NP-jTl" secondAttribute="trailing" constant="10" id="Ssc-V8-RKA"/>
+                                        <constraint firstItem="VcC-NP-jTl" firstAttribute="leading" secondItem="Qbc-JZ-W4c" secondAttribute="leading" constant="10" id="p9M-BK-Vf1"/>
+                                    </constraints>
+                                </view>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="W4j-BO-LJz"/>
+                                </constraints>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                         </subviews>
-                        <color key="backgroundColor" white="0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
-                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
+                            <constraint firstItem="BrB-h1-WRS" firstAttribute="bottom" secondItem="U0K-SW-4ec" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstAttribute="bottom" secondItem="diB-mp-lgX" secondAttribute="bottom" id="YsA-oV-7rf"/>
+                            <constraint firstItem="tGe-Mw-ZOQ" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="23" id="b9M-dX-VZ2"/>
+                            <constraint firstItem="tGe-Mw-ZOQ" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="23" id="f9b-eS-bZm"/>
+                            <constraint firstItem="fQZ-KI-GVf" firstAttribute="trailing" secondItem="diB-mp-lgX" secondAttribute="trailing" id="ixv-TD-6oZ"/>
+                            <constraint firstItem="diB-mp-lgX" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="q9j-ZC-jcs"/>
                             <constraint firstItem="BrB-h1-WRS" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="tGe-Mw-ZOQ" id="3FB-g7-mso"/>
                         <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="visualEffectView" destination="diB-mp-lgX" id="3Na-ZC-WaL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="wSw-Jh-aen">
+                    <connections>
+                        <action selector="onTap:" destination="BV1-FR-VrT" id="HP3-Pe-NQT"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="677.60000000000002" y="14.842578710644679"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="VkM-bq-wu2">
+            <objects>
+                <viewController id="HbT-w9-43d" customClass="HomeViewController" customModule="Untitled" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3qo-6R-MmD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="2589"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIh-2O-NcH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="2569"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dI-79-X0D">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2569"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtQ-Ps-XEi">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="2763.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lm0-cW-taI">
+                                                        <rect key="frame" x="35" y="366" width="305" height="148.5"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Presenting ">
+                                                                <attributes>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="&quot;No Place For Our Dreams”">
+                                                                <attributes>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                                                    <font key="NSOriginalFont" size="18" name="HelveticaNeue-Bold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=", by a Nigerian photographer (whose name remains undisclosed), inspired by ">
+                                                                <attributes>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="Femi Kuti’s">
+                                                                <attributes>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                                                    <font key="NSOriginalFont" size="18" name="HelveticaNeue-Bold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=" studio album, ">
+                                                                <attributes>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="“No Place for My Dream&quot;">
+                                                                <attributes>
+                                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                                                    <font key="NSOriginalFont" size="18" name="HelveticaNeue-Bold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bu5-M7-sKU" customClass="SpringButton" customModule="Spring">
+                                                        <rect key="frame" x="37.5" y="544.5" width="300" height="50"/>
+                                                        <state key="normal" image="Outline"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeOut"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onReadButtonTap:" destination="HbT-w9-43d" eventType="touchUpInside" id="Wbu-G3-Cg9"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hR-5W-s9i" customClass="SpringButton" customModule="Spring">
+                                                        <rect key="frame" x="37.5" y="604.5" width="300" height="50"/>
+                                                        <state key="normal" image="Default"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeOut"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="onStartExhibitionButtonTap:" destination="HbT-w9-43d" eventType="touchUpInside" id="xsA-6p-m9x"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY9-Te-yeY" customClass="SpringLabel" customModule="Spring">
+                                                        <rect key="frame" x="35" y="554.5" width="305" height="696"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="A highly politically charged body of work, ">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content="“No Place For Our Dreams”">
+                                                                <attributes>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment>
+                                                                <mutableString key="content"> combines Photography and Augmented Reality to narrate a story that shows the adverse consequences of immoral acts on average citizens, by the political elite.  
+
+The photo series chronicles a political aspirant who seeks a top position in government. The photographer engages characters from different demographics, demonstrating how aspirants connive with various levels of society, all in the pursuit of power. Each character in the series is acted out by young Nigerians who share the photographer's belief that the masses have the power to change the state of the nation.  
+
+The story parodies and challenges behavioural patterns in Nigeria‘s politics, as the aspirant seeks support from the “Godfather”, bribes a religious leader, and commissions political thugs to terrorise regular citizens upon his commands</mutableString>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value=" fadeInUp"/>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="YES"/>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="delay">
+                                                                <real key="value" value="0.14999999999999999"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame" translatesAutoresizingMaskIntoConstraints="NO" id="ewN-Xs-wGP">
+                                                        <rect key="frame" x="0.0" y="1290.5" width="375" height="350"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoR-l8-04Q" customClass="SpringLabel" customModule="Spring">
+                                                        <rect key="frame" x="35" y="1690.5" width="305" height="953"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment>
+                                                                <mutableString key="content">The photographer further interrogates the ills of Nigerian politics, as the story takes a darker turn involving kidnappings, riots, and ultimately the tragic death of a student. Predictably, the political aspirant emerges as a hero, despite having instigated the chaos.  
+
+To increase poignancy of the project, the photographer has opted to display his project outside of traditional viewing spaces. Instead, the work can be viewed on the streets of Lagos, a mockery of politicians’ campaign posters.   
+
+Commenting on the series, the photographer expressed his frustration at the state of politics in Nigeria:   
+
+</mutableString>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment>
+                                                                <string key="content">“My reason for going ahead with this project was to start a conversation on how we, as ordinary people, suffer from the incompetence of our so-called leaders. I decided to show the work on the streets because it gives a wider range of Nigerians a chance to see the work and discuss possible ways of making the country a better place, regardless of what “they" throw at us. Ultimately, I want us to provoke conversation around the state of politics in Nigeria in attempt to bring about this change."</string>
+                                                                <attributes>
+                                                                    <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value=" fadeInUp"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyC-wj-86S">
+                                                        <rect key="frame" x="37.5" y="2683.5" width="300" height="50"/>
+                                                        <state key="normal" image="Default"/>
+                                                        <connections>
+                                                            <action selector="onStartExhibitionButtonTap:" destination="HbT-w9-43d" eventType="touchUpInside" id="aeF-tO-Emh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="wTJ-c1-QAS">
+                                                        <rect key="frame" x="8" y="8" width="375" height="333"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="wTJ-c1-QAS" firstAttribute="leading" secondItem="VtQ-Ps-XEi" secondAttribute="leading" id="0s8-vu-4aY"/>
+                                                    <constraint firstItem="bu5-M7-sKU" firstAttribute="top" secondItem="Lm0-cW-taI" secondAttribute="bottom" constant="30" id="5H3-hn-LZX"/>
+                                                    <constraint firstAttribute="trailing" secondItem="wTJ-c1-QAS" secondAttribute="trailing" id="8xS-Gs-VAG"/>
+                                                    <constraint firstItem="Lm0-cW-taI" firstAttribute="top" secondItem="wTJ-c1-QAS" secondAttribute="bottom" constant="33" id="B6h-X4-wgA"/>
+                                                    <constraint firstItem="KyC-wj-86S" firstAttribute="top" secondItem="XoR-l8-04Q" secondAttribute="bottom" constant="40" id="CTv-6I-KVA"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XoR-l8-04Q" secondAttribute="trailing" constant="35" id="OjA-SE-hor">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                    </constraint>
+                                                    <constraint firstItem="rY9-Te-yeY" firstAttribute="leading" secondItem="VtQ-Ps-XEi" secondAttribute="leading" constant="35" id="Q4k-7t-VVa">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                    </constraint>
+                                                    <constraint firstItem="ewN-Xs-wGP" firstAttribute="leading" secondItem="VtQ-Ps-XEi" secondAttribute="leading" id="SGb-KY-uJs"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ewN-Xs-wGP" secondAttribute="trailing" id="cVI-QY-37g"/>
+                                                    <constraint firstItem="rY9-Te-yeY" firstAttribute="top" secondItem="Lm0-cW-taI" secondAttribute="bottom" constant="40" id="dG9-8e-rr6"/>
+                                                    <constraint firstItem="bu5-M7-sKU" firstAttribute="centerX" secondItem="VtQ-Ps-XEi" secondAttribute="centerX" id="dxf-bq-UZ5"/>
+                                                    <constraint firstItem="1hR-5W-s9i" firstAttribute="centerX" secondItem="VtQ-Ps-XEi" secondAttribute="centerX" id="gCG-cU-b93"/>
+                                                    <constraint firstItem="XoR-l8-04Q" firstAttribute="leading" secondItem="VtQ-Ps-XEi" secondAttribute="leading" constant="35" id="mhz-dC-h1E">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                    </constraint>
+                                                    <constraint firstItem="XoR-l8-04Q" firstAttribute="top" secondItem="ewN-Xs-wGP" secondAttribute="bottom" constant="50" id="o3V-wO-Me8"/>
+                                                    <constraint firstItem="KyC-wj-86S" firstAttribute="centerX" secondItem="VtQ-Ps-XEi" secondAttribute="centerX" id="q6i-iG-hvx"/>
+                                                    <constraint firstItem="wTJ-c1-QAS" firstAttribute="top" secondItem="VtQ-Ps-XEi" secondAttribute="top" id="q8m-f0-b2V"/>
+                                                    <constraint firstItem="wTJ-c1-QAS" firstAttribute="top" secondItem="VtQ-Ps-XEi" secondAttribute="top" id="rfY-fv-MqR"/>
+                                                    <constraint firstAttribute="trailing" secondItem="rY9-Te-yeY" secondAttribute="trailing" constant="35" id="sMI-Gh-Qd1">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                    </constraint>
+                                                    <constraint firstItem="ewN-Xs-wGP" firstAttribute="top" secondItem="rY9-Te-yeY" secondAttribute="bottom" constant="40" id="sQi-pY-T7l"/>
+                                                    <constraint firstItem="Lm0-cW-taI" firstAttribute="leading" secondItem="VtQ-Ps-XEi" secondAttribute="leading" constant="35" id="xoJ-3a-YkD">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                    </constraint>
+                                                    <constraint firstItem="1hR-5W-s9i" firstAttribute="top" secondItem="bu5-M7-sKU" secondAttribute="bottom" constant="10" id="yfg-Lg-m7s"/>
+                                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KyC-wj-86S" secondAttribute="bottom" constant="30" id="yt7-vK-6ug"/>
+                                                    <constraint firstAttribute="trailing" secondItem="Lm0-cW-taI" secondAttribute="trailing" constant="35" id="zKy-yP-LVw">
+                                                        <variation key="heightClass=regular-widthClass=regular" constant="80"/>
+                                                    </constraint>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="VtQ-Ps-XEi" firstAttribute="leading" secondItem="8dI-79-X0D" secondAttribute="leading" id="4OI-Fj-AEp"/>
+                                            <constraint firstAttribute="bottom" secondItem="VtQ-Ps-XEi" secondAttribute="bottom" id="Xzk-Al-1xs"/>
+                                            <constraint firstItem="VtQ-Ps-XEi" firstAttribute="top" secondItem="8dI-79-X0D" secondAttribute="top" id="Z7h-Oy-cRI"/>
+                                            <constraint firstAttribute="trailing" secondItem="VtQ-Ps-XEi" secondAttribute="trailing" id="swM-xP-q7F"/>
+                                        </constraints>
+                                    </scrollView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggC-5J-RCj" customClass="SpringButton" customModule="Spring">
+                                        <rect key="frame" x="23" y="23" width="50" height="50"/>
+                                        <state key="normal" image="Close Button"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="animation" value="fadeInDown"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onCancelButtonTap:" destination="HbT-w9-43d" eventType="touchUpInside" id="VJ6-ip-7Xd"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="8dI-79-X0D" firstAttribute="top" secondItem="wIh-2O-NcH" secondAttribute="top" id="8ei-v8-aUK"/>
+                                    <constraint firstItem="ggC-5J-RCj" firstAttribute="leading" secondItem="wIh-2O-NcH" secondAttribute="leading" constant="23" id="8ne-5l-efl"/>
+                                    <constraint firstItem="VtQ-Ps-XEi" firstAttribute="width" secondItem="wIh-2O-NcH" secondAttribute="width" id="Cog-3o-iKy"/>
+                                    <constraint firstItem="8dI-79-X0D" firstAttribute="leading" secondItem="wIh-2O-NcH" secondAttribute="leading" id="Hl3-2Q-EGn"/>
+                                    <constraint firstAttribute="trailing" secondItem="8dI-79-X0D" secondAttribute="trailing" id="bN3-14-2eY"/>
+                                    <constraint firstItem="VtQ-Ps-XEi" firstAttribute="height" secondItem="wIh-2O-NcH" secondAttribute="height" priority="250" id="fP8-gS-diu"/>
+                                    <constraint firstAttribute="bottom" secondItem="8dI-79-X0D" secondAttribute="bottom" id="qSB-dy-S1c"/>
+                                    <constraint firstItem="ggC-5J-RCj" firstAttribute="top" secondItem="wIh-2O-NcH" secondAttribute="top" constant="23" id="vUb-kE-s3p"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x6Z-1r-f1J" firstAttribute="bottom" secondItem="wIh-2O-NcH" secondAttribute="bottom" id="2Zl-th-HzT"/>
+                            <constraint firstItem="wIh-2O-NcH" firstAttribute="top" secondItem="x6Z-1r-f1J" secondAttribute="top" id="FEC-5D-WU6"/>
+                            <constraint firstItem="wIh-2O-NcH" firstAttribute="leading" secondItem="x6Z-1r-f1J" secondAttribute="leading" id="Ta2-sE-wS4"/>
+                            <constraint firstItem="x6Z-1r-f1J" firstAttribute="trailing" secondItem="wIh-2O-NcH" secondAttribute="trailing" id="bu4-7K-ZoJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x6Z-1r-f1J"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="2589"/>
+                    <connections>
+                        <outlet property="cancelButton" destination="ggC-5J-RCj" id="bdB-aX-h9W"/>
+                        <outlet property="firstParagraphLabel" destination="rY9-Te-yeY" id="WTi-tC-z3b"/>
+                        <outlet property="headerImage" destination="wTJ-c1-QAS" id="XUT-Qs-cyB"/>
+                        <outlet property="readSynopsisButton" destination="bu5-M7-sKU" id="EDF-Jp-SWt"/>
+                        <outlet property="scrollView" destination="8dI-79-X0D" id="jlq-KX-EJd"/>
+                        <outlet property="secondParagraphLabel" destination="XoR-l8-04Q" id="N9e-iT-6dW"/>
+                        <outlet property="secondStartButton" destination="KyC-wj-86S" id="lrc-0V-880"/>
+                        <outlet property="startExhibition" destination="1hR-5W-s9i" id="V5k-G9-axJ"/>
+                        <outlet property="synopsisBottomConstraint" destination="yt7-vK-6ug" id="H8j-NH-kGW"/>
+                        <outlet property="synopsisImage" destination="ewN-Xs-wGP" id="MJN-59-l6D"/>
+                        <outlet property="synopsisTopConstraint" destination="dG9-8e-rr6" id="Prh-uG-bkr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0XB-TO-Tuu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-247.19999999999999" y="727.7361319340331"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Close Button" width="50" height="50"/>
+        <image name="Default" width="300" height="50"/>
+        <image name="Frame" width="375" height="350"/>
+        <image name="Image" width="375" height="333"/>
+        <image name="Outline" width="300" height="50"/>
+    </resources>
 </document>

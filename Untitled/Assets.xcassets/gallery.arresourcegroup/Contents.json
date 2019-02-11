@@ -1,0 +1,41 @@
+{
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  },
+  "resources" : [
+    {
+      "filename" : "Abduction.arreferenceimage"
+    },
+    {
+      "filename" : "Assassination.arreferenceimage"
+    },
+    {
+      "filename" : "Campaign.arreferenceimage"
+    },
+    {
+      "filename" : "FSars.arreferenceimage"
+    },
+    {
+      "filename" : "Initiation.arreferenceimage"
+    },
+    {
+      "filename" : "Meeting.arreferenceimage"
+    },
+    {
+      "filename" : "Missing.arreferenceimage"
+    },
+    {
+      "filename" : "Pol-Thugs.arreferenceimage"
+    },
+    {
+      "filename" : "Religious-Leader.arreferenceimage"
+    },
+    {
+      "filename" : "Reunion.arreferenceimage"
+    },
+    {
+      "filename" : "Scout.arreferenceimage"
+    }
+  ]
+}
