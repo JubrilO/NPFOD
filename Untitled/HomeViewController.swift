@@ -85,9 +85,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func onCancelButtonTap(_ sender: UIButton) {
         scrollView.setContentOffset(CGPoint(x:0,y:0), animated: true)
-        //        firstParagraphLabel.y = 0
-        //        firstParagraphLabel.animation = "slideDown"
-        //        firstParagraphLabel.animate()
+
         cancelButton.animation = "fadeOutUp"
         cancelButton.animate()
         

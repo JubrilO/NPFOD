@@ -68,7 +68,6 @@ class GalleryViewController: UIViewController, ARSCNViewDelegate, ARSessionDeleg
         else {
             hideCloseButton()
             showingCloseButton = false
-
         }
     }
     
@@ -121,8 +120,6 @@ class GalleryViewController: UIViewController, ARSCNViewDelegate, ARSessionDeleg
         videoPlayer.volume = 0
         videoPlayer.play()
         
-        
-        
         NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: videoPlayer.currentItem, queue: nil)
             { notification in
                 videoPlayer.seek(to: CMTime.zero)
@@ -131,6 +128,7 @@ class GalleryViewController: UIViewController, ARSCNViewDelegate, ARSessionDeleg
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        
         //1. Check We Have An ARImageAnchor And Have Detected Our Reference Image
         guard let imageAnchor = anchor as? ARImageAnchor else { return }
         let referenceImage = imageAnchor.referenceImage
@@ -146,7 +144,6 @@ class GalleryViewController: UIViewController, ARSCNViewDelegate, ARSessionDeleg
         videoHolder.geometry = videoHolderGeometry
         
         //4. Create Our Video Player
-        
         if let videoURL = Bundle.main.url(forResource: referenceImage.name!, withExtension: "mp4"){
             setupVideoOnNode(videoHolder, fromURL: videoURL)
         }

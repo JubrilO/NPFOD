@@ -101,6 +101,16 @@
 			path = Videos;
 			sourceTree = "<group>";
 		};
+		918B3650228EA38D0072EACC /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				91C113EE21F78AD7008B181C /* LaunchScreen.storyboard */,
+				91C113EC21F78AD7008B181C /* Assets.xcassets */,
+				91C113E521F78AD6008B181C /* art.scnassets */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
 		91C113D721F78AD6008B181C = {
 			isa = PBXGroup;
 			children = (
@@ -123,13 +133,11 @@
 			isa = PBXGroup;
 			children = (
 				9123E1CC21FF87E8000B5D8E /* Videos */,
+				918B3650228EA38D0072EACC /* Supporting */,
 				91C113E321F78AD6008B181C /* AppDelegate.swift */,
-				91C113E521F78AD6008B181C /* art.scnassets */,
 				91C113E721F78AD6008B181C /* GalleryViewController.swift */,
 				913B29B0220F95680046B2C9 /* HomeViewController.swift */,
 				91C113E921F78AD6008B181C /* Main.storyboard */,
-				91C113EC21F78AD7008B181C /* Assets.xcassets */,
-				91C113EE21F78AD7008B181C /* LaunchScreen.storyboard */,
 				91C113F121F78AD7008B181C /* Info.plist */,
 			);
 			path = Untitled;
