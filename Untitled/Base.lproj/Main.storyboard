@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HbT-w9-43d">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HbT-w9-43d">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,7 +24,7 @@
                                 </connections>
                             </arscnView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGe-Mw-ZOQ" customClass="SpringButton" customModule="Spring">
-                                <rect key="frame" x="23" y="43" width="50" height="50"/>
+                                <rect key="frame" x="23" y="23" width="50" height="50"/>
                                 <state key="normal" image="Close Button"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autohide" value="NO"/>
@@ -43,7 +42,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Point your camera at the Artwork" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcC-NP-jTl">
                                             <rect key="frame" x="10" y="30" width="355" height="20"/>
                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" red="0.029999999999999999" green="0.040000000000000001" blue="0.11" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -97,13 +96,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIh-2O-NcH">
-                                <rect key="frame" x="0.0" y="20" width="375" height="2569"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="2589"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dI-79-X0D">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2569"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="2589"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VtQ-Ps-XEi">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="2763.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="2763"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lm0-cW-taI">
                                                         <rect key="frame" x="35" y="366" width="305" height="148.5"/>
@@ -183,27 +182,16 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rY9-Te-yeY" customClass="SpringLabel" customModule="Spring">
-                                                        <rect key="frame" x="35" y="554.5" width="305" height="696"/>
+                                                        <rect key="frame" x="35" y="554.5" width="305" height="695.5"/>
                                                         <attributedString key="attributedText">
-                                                            <fragment content="A highly politically charged body of work, ">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="18" name="HelveticaNeue"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
-                                                            <fragment content="“No Place For Our Dreams”">
-                                                                <attributes>
-                                                                    <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
-                                                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
-                                                                </attributes>
-                                                            </fragment>
                                                             <fragment>
-                                                                <mutableString key="content"> combines Photography and Augmented Reality to narrate a story that shows the adverse consequences of immoral acts on average citizens, by the political elite.  
+                                                                <mutableString key="content">A highly politically charged body of work, “No Place For Our Dreams” combines Photography and Augmented Reality to narrate a story that shows the adverse consequences of immoral acts on average citizens, by the political elite.  
 
 The photo series chronicles a political aspirant who seeks a top position in government. The photographer engages characters from different demographics, demonstrating how aspirants connive with various levels of society, all in the pursuit of power. Each character in the series is acted out by young Nigerians who share the photographer's belief that the masses have the power to change the state of the nation.  
 
 The story parodies and challenges behavioural patterns in Nigeria‘s politics, as the aspirant seeks support from the “Godfather”, bribes a religious leader, and commissions political thugs to terrorise regular citizens upon his commands</mutableString>
                                                                 <attributes>
+                                                                    <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <font key="NSFont" size="18" name="HelveticaNeue"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -219,10 +207,10 @@ The story parodies and challenges behavioural patterns in Nigeria‘s politics, 
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frame" translatesAutoresizingMaskIntoConstraints="NO" id="ewN-Xs-wGP">
-                                                        <rect key="frame" x="0.0" y="1290.5" width="375" height="350"/>
+                                                        <rect key="frame" x="0.0" y="1290" width="375" height="350"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoR-l8-04Q" customClass="SpringLabel" customModule="Spring">
-                                                        <rect key="frame" x="35" y="1690.5" width="305" height="953"/>
+                                                        <rect key="frame" x="35" y="1690" width="305" height="953"/>
                                                         <attributedString key="attributedText">
                                                             <fragment>
                                                                 <mutableString key="content">The photographer further interrogates the ills of Nigerian politics, as the story takes a darker turn involving kidnappings, riots, and ultimately the tragic death of a student. Predictably, the political aspirant emerges as a hero, despite having instigated the chaos.  
@@ -233,6 +221,7 @@ Commenting on the series, the photographer expressed his frustration at the stat
 
 </mutableString>
                                                                 <attributes>
+                                                                    <color key="NSColor" red="0.029999999999999999" green="0.040000000000000001" blue="0.11" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" size="18" name="HelveticaNeue"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -240,6 +229,7 @@ Commenting on the series, the photographer expressed his frustration at the stat
                                                             <fragment>
                                                                 <string key="content">“My reason for going ahead with this project was to start a conversation on how we, as ordinary people, suffer from the incompetence of our so-called leaders. I decided to show the work on the streets because it gives a wider range of Nigerians a chance to see the work and discuss possible ways of making the country a better place, regardless of what “they" throw at us. Ultimately, I want us to provoke conversation around the state of politics in Nigeria in attempt to bring about this change."</string>
                                                                 <attributes>
+                                                                    <color key="NSColor" red="0.029999999999999999" green="0.040000000000000001" blue="0.11" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <font key="NSFont" size="18" name="HelveticaNeue-Bold"/>
                                                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="4" tighteningFactorForTruncation="0.0"/>
                                                                 </attributes>
@@ -251,7 +241,7 @@ Commenting on the series, the photographer expressed his frustration at the stat
                                                         </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KyC-wj-86S">
-                                                        <rect key="frame" x="37.5" y="2683.5" width="300" height="50"/>
+                                                        <rect key="frame" x="37.5" y="2683" width="300" height="50"/>
                                                         <state key="normal" image="Default"/>
                                                         <connections>
                                                             <action selector="onStartExhibitionButtonTap:" destination="HbT-w9-43d" eventType="touchUpInside" id="aeF-tO-Emh"/>
